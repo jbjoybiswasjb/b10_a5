@@ -96,15 +96,24 @@ function addAddDonationAmountInTotalDonationAndShowTheRemainingTotalAmount(total
             const remainingBalance = mainBalance - donationAmount;
             if (remainingBalance < 0) {
                 alert("You can not donate. you have insufficient  money.");
-                document.getElementById(donationBtnId).removeAttribute('onclick', 'my_modal_1.showModal()');
                 return;
             }
+
+
+            if (remainingBalance < mainBalance) {
+                document.getElementById("my_modal_1").showModal();
+            }
+
             document.getElementById(mainBalanceId).innerText = remainingBalance;
 
 
 
             const totalDonation = totalAmountBeforeDonation + donationAmount;
             document.getElementById(totalAmountBeforeDonationId).innerText = totalDonation;
+
+
+
+            document.getElementById(donationAmountFieldId).value = '';
 
 
 
@@ -126,9 +135,7 @@ function addAddDonationAmountInTotalDonationAndShowTheRemainingTotalAmount(total
                 Date: ${dateTime}
             </p>            
             `;
-            historyContainer.appendChild(div);
-
-            
+            historyContainer.appendChild(div);            
 
         })
 }

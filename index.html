@@ -165,7 +165,7 @@
                                             class="input input-bordered w-full p-4 mb-4" required />
                                     </div>
                                     <div class="form-control">
-                                        <button onclick="my_modal_1.showModal()" id="donate_flood_at_noakhali"
+                                        <button id="donate_flood_at_noakhali"
                                             class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
                                             Donate Now
                                         </button>
@@ -223,7 +223,7 @@
                                             class="input input-bordered w-full p-4 mb-4" required />
                                     </div>
                                     <div class="form-control">
-                                        <button onclick="my_modal_1.showModal()" id="flood_relief_in_feni_btn"
+                                        <button id="flood_relief_in_feni_btn"
                                             class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
                                             Donate Now
                                         </button>
@@ -281,7 +281,7 @@
                                             class="input input-bordered w-full p-4 mb-4" required />
                                     </div>
                                     <div class="form-control">
-                                        <button onclick="my_modal_1.showModal()" id="aid_quota_protest_donation_btn"
+                                        <button id="aid_quota_protest_donation_btn"
                                             class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
                                             Donate Now
                                         </button>
@@ -295,13 +295,19 @@
 
                         <!-- Modal. -->
                         <dialog id="my_modal_1" class="modal">
-                            <div class="modal-box">
-                                <h3 class="text-lg font-bold">Hello!</h3>
-                                <p class="py-4">Press ESC key or click the button below to close</p>
-                                <div class="modal-action">
+                            <div class="modal-box text-center">
+                                <h3 class="text-3xl font-bold mb-6">Congrats !</h3>
+                                <div>
+                                    <img src="media/images/coin.png" alt="Coin logo" title="Coin logo" class="mx-auto h-12 w-12">
+                                </div>
+                                <p class="py-4">
+                                    You Have Donated for Humankind
+                                </p>
+                                <h4 class="text-xl font-bold text-heading/80">Successfully</h4>
+                                <div class="modal-action flex justify-center">
                                     <form method="dialog">
                                         <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn">Close</button>
+                                        <button class="btn">Close Confirmation</button>
                                     </form>
                                 </div>
                             </div>
