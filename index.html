@@ -5,7 +5,8 @@
 
         <!-- Meta tags. -->
         <meta charset="UTF-8">
-        <meta name="description" content="Donation Bangladesh is a website where people can donate for bangladeshi people who are affected by blood, injured in quota movement.">
+        <meta name="description"
+            content="Donation Bangladesh is a website where people can donate for bangladeshi people who are affected by blood, injured in quota movement.">
         <meta name="keywords" content="donate Bangladesh, blood, quota movement">
         <meta name="author" content="Donate Bangladesh">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,10 +62,11 @@
                                                     Header.
             ===================================================================================
         -->
-        <header class="sticky top-0 bg-headingBg pb-10">
+        <header class="sticky top-0 bg-headingBg pb-0 lg:pb-10">
             <div class="mx-auto w-11/12 lg:w-10/12 flex flex-col gap-4 md:flex-row justify-between items-center p-6">
                 <div class="order-3 lg:order-none">
-                    <button class="font-semibold text-heading text-xl btn flex-nowrap h-auto  px-8 py-3 bg-buttonBg">Blog</button>
+                    <button
+                        class="font-semibold text-heading text-xl btn flex-nowrap h-auto  px-8 py-3 bg-buttonBg">Blog</button>
                 </div>
                 <div class="flex items-center gap-4 order-1 lg:order-none">
                     <a href="#">
@@ -101,8 +103,10 @@
 
                 <!-- Button section. -->
                 <section class="flex gap-4 justify-center mb-8">
-                    <button class="btn flex-nowrap h-auto px-8 py-4 font-semibold text-xl text-heading bg-buttonBg">Donation</button>
-                    <button class="btn flex-nowrap h-auto px-8 py-4 font-medium text-xl text-heading/70 border border-heading/30">History</button>
+                    <button
+                        class="btn flex-nowrap h-auto px-8 py-4 font-semibold text-xl text-heading bg-buttonBg">Donation</button>
+                    <button
+                        class="btn flex-nowrap h-auto px-8 py-4 font-medium text-xl text-heading/70 border border-heading/30">History</button>
                 </section>
 
 
@@ -110,9 +114,11 @@
 
 
 
-                <section class="flex justify-between items-center gap-8 p-8 border border-heading/10 rounded-2xl">
+                <section
+                    class="flex flex-col md:flex-row justify-between items-center gap-8 p-8 border border-heading/10 rounded-2xl">
                     <div class="flex-1">
-                        <img src="media/images/noakhali.png" alt="Flood at Noakhali" title="Flood at Noakhali" class="h-full">
+                        <img src="media/images/noakhali.png" alt="Flood at Noakhali" title="Flood at Noakhali"
+                            class="h-full">
                     </div>
                     <div class="flex-1">
                         <button class="flex items-center gap-2 bg-heading/5 px-4 py-3 rounded-lg">
@@ -120,18 +126,28 @@
                             <span class="font-normal text-heading/70 text-base">5500 BDT</span>
                         </button>
                         <article class="mb-6">
-                            <h2 class="text-xl font-bold text-heading my-4">Donate for Flood at Noakhali, Bangladesh</h2>
+                            <h2 class="text-xl font-bold text-heading my-4">Donate for Flood at Noakhali, Bangladesh
+                            </h2>
                             <p class="text-base text-heading/70 font-light">
-                                The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will help provide
-                                essential supplies and to those affected by this disaster. Every contribution, big or small, makes difference. Please
-                                join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                                The recent floods in Noakhali have caused significant damage to homes infrastructure.
+                                Your donation will help provide
+                                essential supplies and to those affected by this disaster. Every contribution, big or
+                                small, makes difference. Please
+                                join us in supporting the relief efforts and making a positive impact on the lives of
+                                those in need.
                             </p>
                         </article>
-                        <form action="">
-                            <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full p-4 mb-4">
-                            <button type="submit" class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
-                                Donate Now
-                            </button>
+                        <form>
+                            <div class="form-control">
+                                <input type="number" placeholder="Write Donation Amount"
+                                    class="input input-bordered w-full p-4 mb-4" required />
+                            </div>
+                            <div class="form-control">
+                                <button
+                                    class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
+                                    Donate Now
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </section>
