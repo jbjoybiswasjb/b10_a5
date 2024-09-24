@@ -65,7 +65,7 @@
         <header class="sticky top-0 bg-headingBg/70 backdrop-blur-sm pb-2 lg:pb-10 border-b-2">
             <div class="mx-auto w-11/12 lg:w-10/12 flex flex-col gap-4 md:flex-row justify-between items-center p-6">
                 <div class="order-3 lg:order-none">
-                    <button
+                    <button id="blog_btn"
                         class="font-semibold text-heading text-xl btn flex-nowrap h-auto  px-8 py-3 bg-buttonBg">Blog</button>
                 </div>
                 <div class="flex items-center gap-4 order-1 lg:order-none">
@@ -86,7 +86,8 @@
 
             <!-- Button section. -->
             <section class="flex gap-4 justify-center mt-1 md:mt-8">
-                <button id="donation_btn" class="btn flex-nowrap h-auto px-8 py-4 font-semibold text-xl text-heading bg-buttonBg">
+                <button id="donation_btn"
+                    class="btn flex-nowrap h-auto px-8 py-4 font-semibold text-xl text-heading bg-buttonBg">
                     Donation
                 </button>
                 <button id="history_btn"
@@ -141,7 +142,8 @@
                                     </span>
                                 </button>
                                 <article class="mb-6">
-                                    <h2 class="text-xl font-bold text-heading my-4">Donate for Flood at Noakhali,
+                                    <h2 id="donate_flood_noakhali_heading" class="text-xl font-bold text-heading my-4">
+                                        Donate for Flood at Noakhali,
                                         Bangladesh
                                     </h2>
                                     <p class="text-base text-heading/70 font-light">
@@ -158,11 +160,12 @@
                                 </article>
                                 <form>
                                     <div class="form-control">
-                                        <input id="donate_flood_at_noakhali_amount" type="number" placeholder="Write Donation Amount"
+                                        <input id="donate_flood_at_noakhali_amount" type="number"
+                                            placeholder="Write Donation Amount"
                                             class="input input-bordered w-full p-4 mb-4" required />
                                     </div>
                                     <div class="form-control">
-                                        <button id="donate_flood_at_noakhali"
+                                        <button onclick="my_modal_1.showModal()" id="donate_flood_at_noakhali"
                                             class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
                                             Donate Now
                                         </button>
@@ -194,7 +197,8 @@
                                     </span>
                                 </button>
                                 <article class="mb-6">
-                                    <h2 class="text-xl font-bold text-heading my-4">Donate for Flood Relief in
+                                    <h2 id="flood_relief_in_feni_heading" class="text-xl font-bold text-heading my-4">
+                                        Donate for Flood Relief in
                                         Feni,Bangladesh
                                     </h2>
                                     <p class="text-base text-heading/70 font-light">
@@ -214,11 +218,12 @@
                                 </article>
                                 <form>
                                     <div class="form-control">
-                                        <input id="flood_relief_in_feni_amount" type="number" placeholder="Write Donation Amount"
+                                        <input id="flood_relief_in_feni_amount" type="number"
+                                            placeholder="Write Donation Amount"
                                             class="input input-bordered w-full p-4 mb-4" required />
                                     </div>
                                     <div class="form-control">
-                                        <button id="flood_relief_in_feni_btn"
+                                        <button onclick="my_modal_1.showModal()" id="flood_relief_in_feni_btn"
                                             class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
                                             Donate Now
                                         </button>
@@ -235,7 +240,8 @@
                                             Aid for Injured in the Quota Movement.
                             ===================================================================                    
                         -->
-                        <section class="flex flex-col md:flex-row justify-between items-center gap-8 p-8 border border-heading/10 rounded-2xl">
+                        <section
+                            class="flex flex-col md:flex-row justify-between items-center gap-8 p-8 border border-heading/10 rounded-2xl">
                             <div class="flex-1">
                                 <img src="media/images/quota-protest.png" alt="Quota protest" title="Quota protest"
                                     class="h-full">
@@ -248,7 +254,8 @@
                                     </span>
                                 </button>
                                 <article class="mb-6">
-                                    <h2 class="text-xl font-bold text-heading my-4">Aid for Injured in the Quota
+                                    <h2 id="aid_quota_protest_donation_heading"
+                                        class="text-xl font-bold text-heading my-4">Aid for Injured in the Quota
                                         Movement
                                     </h2>
                                     <p class="text-base text-heading/70 font-light">
@@ -269,11 +276,12 @@
                                 </article>
                                 <form>
                                     <div class="form-control">
-                                        <input id="aid_quota_protest_donation_field" type="number" placeholder="Write Donation Amount"
+                                        <input id="aid_quota_protest_donation_field" type="number"
+                                            placeholder="Write Donation Amount"
                                             class="input input-bordered w-full p-4 mb-4" required />
                                     </div>
                                     <div class="form-control">
-                                        <button id="aid_quota_protest_donation_btn"
+                                        <button onclick="my_modal_1.showModal()" id="aid_quota_protest_donation_btn"
                                             class="btn flex-nowrap h-auto px-8 py-4 w-full font-semibold text-xl text-heading bg-buttonBg">
                                             Donate Now
                                         </button>
@@ -281,6 +289,23 @@
                                 </form>
                             </div>
                         </section>
+
+
+
+
+                        <!-- Modal. -->
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box">
+                                <h3 class="text-lg font-bold">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
 
 
@@ -295,7 +320,7 @@
                 -->
                 <section id="history_page" class="hidden">
 
-                    <div class="grid grid-cols-1 gap-6">
+                    <div class="grid grid-cols-1 gap-6" id="history_container">
                         <div class="p-8 border border-heading/10 rounded-2xl">
                             <h2 class="mb-4 text-heading text-xl font-bold">
                                 96500 Taka is Donated for famine-2024 at Feni, Bangladesh
@@ -304,8 +329,8 @@
                                 Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
                             </p>
                         </div>
-                        
-                        
+
+
                         <div class="p-8 border border-heading/10 rounded-2xl">
                             <h2 class="mb-4 text-heading text-xl font-bold">
                                 6500 Taka is Donated for Flood Relief in Feni,Bangladesh
@@ -314,8 +339,8 @@
                                 Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
                             </p>
                         </div>
-                        
-                        
+
+
                         <div class="p-8 border border-heading/10 rounded-2xl">
                             <h2 class="mb-4 text-heading text-xl font-bold">
                                 15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh

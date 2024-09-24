@@ -73,7 +73,7 @@ function getInputNumberById(id) {
 
 
 
-function addAddDonationAmountInTotalDonationAndShowTheRemainingTotalAmount(totalAmountBeforeDonationId, donationAmountFieldId, donationBtnId, mainBalanceId) {
+function addAddDonationAmountInTotalDonationAndShowTheRemainingTotalAmount(totalAmountBeforeDonationId, donationAmountFieldId, donationBtnId, mainBalanceId, headingId) {
     document.getElementById(donationBtnId)
         .addEventListener('click', function (event) {
 
@@ -84,30 +84,51 @@ function addAddDonationAmountInTotalDonationAndShowTheRemainingTotalAmount(total
             const mainBalance = getInnerTextNumberById(mainBalanceId);
 
             if (donationAmount < 1 || isNaN(donationAmount)) {
-                alert('Please give right amount of donation');
+                alert('Please give right amount of donation');                
+                document.getElementById(donationBtnId).removeAttribute('onclick', 'my_modal_1.showModal()');
                 return;
             }
 
 
 
 
-            
-            const remainingBalance = mainBalance - donationAmount;
 
+            const remainingBalance = mainBalance - donationAmount;
             if (remainingBalance < 0) {
                 alert("You can not donate. you have insufficient  money.");
+                document.getElementById(donationBtnId).removeAttribute('onclick', 'my_modal_1.showModal()');
                 return;
             }
-
             document.getElementById(mainBalanceId).innerText = remainingBalance;
 
 
 
-
-
             const totalDonation = totalAmountBeforeDonation + donationAmount;
-
             document.getElementById(totalAmountBeforeDonationId).innerText = totalDonation;
+
+
+
+
+
+
+            const dateTime = new Date();
+
+            const heading = document.getElementById(headingId).innerText;
+
+            const historyContainer = document.getElementById('history_container');
+            const div = document.createElement('div');
+            div.setAttribute('class', 'p-8 border border-heading/10 rounded-2xl');
+            div.innerHTML = `            
+            <h2 class="mb-4 text-heading text-xl font-bold">
+                ${donationAmount} Taka is ${heading}
+            </h2>
+            <p class="text-base font-light text-heading/70">
+                Date: ${dateTime}
+            </p>            
+            `;
+            historyContainer.appendChild(div);
+
+            
 
         })
 }
