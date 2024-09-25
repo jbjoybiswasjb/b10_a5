@@ -4,6 +4,9 @@ ChangeBtnBgShowSpecificSectionById('history_btn', 'history_page');
 
 
 
+
+
+// Add donation amount in total donation, show confirmation modal, show alert if insufficient balance, decrease main balance after donation by giving id.
 addAddDonationAmountInTotalDonationAndShowTheRemainingTotalAmount('total_amount_before_donation_id', 'donate_flood_at_noakhali_amount', 'donate_flood_at_noakhali', 'main_balance', 'donate_flood_noakhali_heading');
 
 addAddDonationAmountInTotalDonationAndShowTheRemainingTotalAmount('total_flood_relief_in_feni_amount', 'flood_relief_in_feni_amount', 'flood_relief_in_feni_btn', 'main_balance', 'flood_relief_in_feni_heading');
